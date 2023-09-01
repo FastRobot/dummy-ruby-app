@@ -4,6 +4,6 @@
 
 set -eu
 
-echo "Setting up ssh key"
+echo "Not setting up ssh key"
 
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/buildkite_buildkite-demo"
+# export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/buildkite_dummy-ruby-app"
