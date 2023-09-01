@@ -6,4 +6,6 @@ set -eu
 
 echo "Not setting up ssh key"
 
-export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/buildkite_dummy-ruby-app"
+# instead of this environment hook (which has to be done before the repo can be pulled, and thus can't be stored
+# usefully in the repo), I've left a mounted .ssh/config in the agent which uses hostname tricks to pick which identity
+#export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/buildkite_dummy-ruby-app"
