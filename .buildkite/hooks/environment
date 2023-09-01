@@ -1,0 +1,9 @@
+
+# runs before all other hooks, except for pre-bootstrap
+# used to set the ssh key to the deploy key for this repo
+
+set -eu
+
+echo "Setting up ssh key"
+
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/buildkite_buildkite-demo"

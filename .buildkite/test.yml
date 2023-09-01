@@ -1,0 +1,6 @@
+steps:
+  - label: "test bundle"
+    command: "bundle install"
+  - label: "rake"
+    command: "bundle exec rake test"
+    
