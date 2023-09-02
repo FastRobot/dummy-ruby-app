@@ -1,12 +1,9 @@
 steps:
-  - label: "install_ruby"
-    commands:
+  - commands:
     - "apt-get update"
     - "apt-get install -y ruby bundler"
-  - label: "bundle_install"
-    depends_on: "install_ruby"
-    command: "bundle install"
-  - label: "rake"
-    command: "bundle exec rake test"
-    depends_on: "bundle_install"
-    
+  - wait
+  - command: "bundle install"
+  - wait
+  - command: "bundle exec rake test"
+
