@@ -2,7 +2,7 @@ steps:
   - label: "install_ruby"
     commands:
     - "apt-get update"
-    - "apt-get install -y make gcc libssl-dev libreadline-dev zlib1g-dev"
+    - "apt-get install -y make g++ gcc libssl-dev libreadline-dev zlib1g-dev"
     - "rbenv install"
   - label: "bundle_install"
     depends_on: "install_ruby"
