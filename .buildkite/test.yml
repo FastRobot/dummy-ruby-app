@@ -1,13 +1,13 @@
 steps:
-  - label: "install bundler"
+  - label: "install_ruby"
     commands:
     - "apt update"
     - "apt install -y rbenv ruby-build"
     - "rbenv install"
-  - label: "test bundle"
-    depends_on: "install bundler"
+  - label: "bundle_install"
+    depends_on: "install_ruby"
     command: "bundle install"
   - label: "rake"
     command: "bundle exec rake test"
-    depends_on: "bundle install"
+    depends_on: "bundle_install"
     
